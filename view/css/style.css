@@ -1,0 +1,1248 @@
+@font-face {
+    src: url(../font/Lato-Hairline.ttf);
+    font-family: LatoHairline;
+}
+
+@font-face {
+    src: url(../font/Lato-Light.ttf);
+    font-family: LatoLight;
+}
+
+@font-face {
+    src: url(../font/Lato-Bold.ttf);
+    font-family: LatoBold;
+}
+
+@font-face {
+    src: url(../font/Lato-Regular.ttf);
+    font-family: LatoRegular;
+}
+
+@font-face {
+    src: url(../font/MyriadPro-Bold.otf);
+    font-family: MyriadPro;
+}
+
+body {
+    font-family: LatoHairline, Calibri, serif;
+    width: 100vw;
+    min-width: 700px;
+    min-height: 700px;
+    overflow-x: hidden;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+.noscroll {
+    position: fixed;
+    overflow-y:scroll;
+    width: 100vw;
+}
+
+/** MENUBAR **/
+#menu {
+    height: 8.82vh;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.43);
+    line-height: 8.82vh;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+}
+
+#logo {
+    width: 3.28vw;
+    margin-left: 3.9vw;
+    vertical-align: middle;
+    position: relative;
+    bottom: 4px;
+    right: 2px;
+}
+
+#menu .title {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 2.1vw;
+    font-family: MyriadPro, serif;
+    color: #dddbdb;
+}
+
+#menu #menu-item {
+    padding-right: 6.25vw;
+    float: right;
+}
+
+#menu #menu-item .element {
+    display: inline-block;
+    padding: 0 10px;
+    font-family: MyriadPro, serif;
+    font-size: 1vw;
+    color: #ffffff;
+    height: 40px;
+    vertical-align: middle;
+    line-height: 40px;
+    border-radius: 2px;
+    transition: color 0.2s, background 0.1s;
+    background-color: #7bbe42;
+    margin: 0 2px;
+}
+
+#menu #menu-item .element:hover {
+    background-color: rgba(245, 245, 245, 0.60);
+    color: #7bbe42;
+}
+
+#menu-item .element #user-icon {
+    width: 2.08vw;
+    vertical-align: middle;
+    position: relative;
+    top: 1px;
+}
+
+/** MESSAGE FLASH **/ 
+#menu .messageFlash{
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 10px;
+    border-radius: 2px;
+    margin-left: 50px;
+    text-align: center;
+    font-size: 1vw;
+    vertical-align: middle;
+    font-family: LatoRegular;
+    background-color: #f5f5f5;
+}
+
+#menu .success {
+    height: 40px;
+    /** background-color: rgba(98, 160, 61, 0.70);
+    border-top: 1px solid rgba(98, 160, 61, 0.45);
+    border-bottom: 1px solid rgba(98, 160, 61, 0.50); **/
+    color: #7bbe42;
+}
+
+#menu .error {
+    height: 40px;
+    /** background-color: rgba(225, 39, 43, 0.40);
+    border-top: 1px solid rgba(225, 39, 43, 0.45);
+    border-bottom: 1px solid rgba(225, 39, 43, 0.50); **/
+    color: #d12125;
+}
+
+#menu .warning {
+    height: 40px;
+    color: #e68828;
+}
+
+#accountMenu {
+    width: 270px;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.70);
+    border-radius: 5px;
+    position: absolute;
+    top: 9.3vh;
+    right: 20px;
+}
+
+#arrow-menu {
+    width: 40px;
+    position: relative;
+    bottom: 7.30vh;
+    left: 65%;
+}
+
+#accountMenu .item {
+    height: 40px;
+    line-height: 40px;
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+    font-family: MyriadPro, serif;
+    font-size: 18px;
+    border-radius: 2px;
+    transition: background 0.5s;
+    padding: 5px 0;
+}
+
+#accountMenu .item:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.31);
+}
+
+#accountMenu .logout:hover {
+    background-color: rgba(196, 31, 35, 0.68);
+}
+
+#accountMenu .separation {
+    height: 1px;
+    background-color: white;
+    width: 80%;
+    margin: 10px auto;
+}
+
+#accountMenu .icon {
+    height: 35px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+#accountMenu .iconParam {
+    height: 30px;
+    position: relative;
+    right: 2px;
+}
+
+#accountMenu .text {
+    height: 40px;
+    vertical-align: middle;
+    padding: 0 10px;
+}
+
+/** HEADER **/
+#header {
+    height: 83vh;
+    background-image: url(../image/header.png);
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    padding-top: 17vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+#header .button {
+    margin: 1.3vw;
+    border: none;
+    background-color: #7bbe42;
+    width: 200px;
+    height: 45px;
+    line-height: 42px;
+    font-family: LatoLight;
+    font-size: 1.2vw;
+    color: white;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+    outline: none;
+}
+
+#header .button:hover {
+    cursor: pointer;
+}
+
+#texteHeader {
+    width: 31.25vw;
+    font-size: 3.125vw;
+    text-align: center;
+    margin: 0 auto 1.85vh auto;
+    color: #ffffff;
+}
+
+#linkApp {
+    width: 100%;
+    height: 70px;
+    line-height: 68px;
+    position: absolute;
+    bottom: -2px;
+}
+
+#linkApp .text {
+    font-family: LatoLight;
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+#linkApp .green {
+    color: #7bbe42;
+    text-decoration: none;
+}
+
+#scrollBottomButton {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 80px;
+    left: -20px;
+    margin-left: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+#scrollBottomButton:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/** OFFRES **/
+
+#offres {
+    padding: 7vh 0;
+    min-height: 370px;
+    text-align: center;
+}
+
+#offres .title {
+    text-transform: uppercase;
+    font-size: 1.875vw;
+    width: 15.625vw;
+    line-height: 3.7vh;
+    margin: 0 auto 1.85vh auto;
+    font-family: LatoLight, serif;
+    font-weight: bold;
+    color: #8e8e8e;
+}
+
+#offres .offre-box {
+    height: 235px;
+    width: 60vw;
+    min-width: 700px;
+    border: 1px solid #dedede;
+    margin: 2vh auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.offre-box .photo {
+    height: 100%;
+}
+
+.offre-box .infoText {
+    display: inline-block;
+    vertical-align: top;
+    width: 30vw;
+}
+
+.offre-box .infoPrix {
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+    text-align: center;
+}
+
+.offre-box .under-title {
+    font-family: LatoLight, serif;
+    font-size: 32px;
+    color: #6e6e6e;
+    margin: 0.462vh 0 0 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.offre-box .prix {
+    width: 9vw;
+    height: 100px;
+    line-height: 100px;
+    border-bottom: 2px solid #888888;
+    font-size: 20px;
+    font-family: LatoBold, serif;
+    color: #7bbe42;
+    margin: 0 auto;
+}
+
+.offre-box .prix .euro {
+    font-size: 1.1vw;
+    position: relative;
+    left: 1px;
+
+}
+
+.offre-box .prix .mois {
+    font-size: 1vw;
+    position: relative;
+    top: 3px;
+    left: 1px;
+}
+
+.offre-box .info {
+    width: 14.32vw;
+    margin: 20px 0 0 50px;
+    font-size: 16px;
+    font-family: LatoRegular, serif;
+    color: #8e8e8e;
+    line-height: 16px;
+}
+
+.offre-box .more {
+    font-size: 16px;
+    font-family: LatoRegular, serif;
+    color: #7bbe42;
+    text-decoration: none;
+    height: 30px;
+    line-height: 30px;
+    padding: 7px 10px;
+    border-radius: 5px;
+    border: 1px solid #7bbe42;
+    transition: background 0.3s, color 0.3s;
+    position: relative;
+    top: 40px;
+}
+
+.offre-box .more:hover {
+    background-color: #7bbe42;
+    color: white;
+}
+
+/** HOW IT WORK **/
+
+#how-it-work {
+    height: 45.83vh;
+    min-height: 400px;
+    background-color: #7bbe42;
+    text-align: center;
+    padding: 6vh 0;
+}
+
+#how-it-work .title {
+    font-family: LatoLight, serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+#how-it-work .item {
+    width: 12.76vw;
+    min-width: 120px;
+    min-height: 120px;
+    height: 12.76vw;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: inline-block;
+    margin: 7.4vh 5.2vw;
+    vertical-align: middle;
+    position: relative;
+}
+
+#how-it-work .item .icon {
+    width: 20%;
+    margin: 35% 0;
+}
+
+#how-it-work .icon-add {
+    position: relative;
+    left: 0.3vw;
+    top: 4px;
+}
+
+#how-it-work .link-item {
+    width: 4.427vw;
+    height: 2px;
+    vertical-align: middle;
+    background-color: white;
+    display: inline-block;
+}
+
+#how-it-work .item .info {
+    font-family: MyriadPro, serif;
+    height: 50px;
+    width: 16vw;
+    font-size: 14px;
+    line-height: 16px;
+    color: white;
+    font-weight: 200;
+    text-align: left;
+    position: absolute;
+    bottom: -70px;
+}
+
+/** PARTNER JOIN **/
+
+#partnerJoin {
+    width: 100vw;
+    height: 220px;
+    padding: 15px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#partnerJoin .text {
+    width: 29vw;
+    font-family: LatoLight;
+    font-size: 30px;
+    line-height: 35px;
+    margin: 5px auto;
+    color: #7bbe42;
+}
+
+#partnerJoin .icon {
+    width: 85px;
+    margin: 0 auto;
+    display: block;
+}
+
+#partnerJoin .button {
+    font-family: LatoLight;
+    font-size: 1.2vw;
+    border: 2px solid #7bbe42;
+    color: #7bbe42;
+    border-radius: 2px;
+    padding: 4px 45px;
+    height: 45px;
+    line-height: 40px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+#partnerJoin .button:hover{
+    background-color: #7bbe42;
+    color: white;
+}
+
+/** ABOUT US **/
+
+#about-us {
+    height: 42.59vh;
+    min-height: 290px;
+    padding-top: 6.48vh;
+    padding-bottom: 3vw;
+    position: relative;
+}
+
+#about-us .backImg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 34vw;
+}
+
+#about-us .text-box {
+
+    width: 43.23vw;
+    min-width: 500px;
+    margin: 0 auto 5.09vh auto;
+    position: relative;
+    text-align: center;
+}
+
+#about-us .text-box #quotetop {
+    position: absolute;
+    top: -1vw;
+    left: -3vw;
+}
+
+#about-us .text-box #quotebot {
+    position: absolute;
+    bottom: -2vw;
+    right: -4vw;
+}
+
+#quotebot, #quotetop {
+    width: 3.385vw;
+}
+
+#about-us .text-box .text {
+    width: 36.98vw;
+    min-width: 480px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: LatoRegular, serif;
+    font-size: 16px;
+    color: #7bbe42;
+    padding-top: 4.17vh;
+    line-height: 20px;
+    position: relative;
+}
+
+#about-us .text-box .user-icon {
+    width: 5vw;
+    margin: 4.48vh 4.16vw 0 4.16vw;
+}
+
+/** LOCATION **/
+
+#location {
+    height: 530px;
+    position: relative;
+}
+
+#location #google-map {
+    width: 67vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#location #map-info {
+    width: 35vw;
+    height: 100%;
+    background-color: #7bbe42;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Pour faire un triangle vers la droite */
+#triangle{
+    width: 0;
+    height: 0;
+    border-right: 27.6vw solid transparent;
+    border-bottom: 530px solid transparent;
+    border-left: 27.6vw solid #7bbe42;
+    position: absolute;
+    top: 0;
+    left: 34.95vw;
+}
+
+#triangle .content {
+    width: 28vw;
+    height: 11.11vh;
+    line-height: 11.11vh;
+    position: relative;
+    right: 42vw;
+    top: 3.24vh;
+}
+
+#triangle .content #location-icon {
+    height: 8.8vh;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    bottom: 1.9vh;
+}
+
+#triangle .content #location-text {
+    height: 100%;
+    line-height: 40px;
+    display: inline-block;
+    font-family: LatoLight, serif;
+    font-size: 32px;
+    text-align: left;
+    color: #ffffff;
+    position: relative;
+    top: 1.39vh;
+    left: 2.1vw;
+}
+
+/** CONTACT **/
+
+#contact {
+    height: 165px;
+    padding: 60px 0 50px 0;
+    text-align: center;
+}
+
+#contact .title {
+    font-family: LatoLight, serif;
+    font-size: 41px;
+    color: #7bbe42;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+
+#contact .contact-icon {
+    height: 58px;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+/** FOOTER **/
+
+#footer {
+    height: 75px;
+    background-color: #7bbe42;
+    position: relative;
+    padding-top: 15px;
+}
+
+#footer .info {
+    position: absolute;
+    top: 10px;
+    right: 150px;
+}
+
+#footer .droits {
+    position: absolute;
+    top: 20px;
+    left: 150px;
+}
+
+#footer .item {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: LatoRegular;
+    line-height: 20px;
+    font-weight: bold;
+    outline: none;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+#footer a:hover {
+    color: #8c8c8c;
+}
+
+#goTop {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    right: 4.5vw;
+    top: 20px;
+}
+
+#goTop:hover {
+    cursor: pointer;
+}
+
+/** LOGIN SUBSCRIPTION **/
+
+#login {
+    width: 47vw;
+    display: inline-block;
+    position: relative;
+    top: 11vh;
+    vertical-align: top;
+    margin: 0 auto;
+}
+
+#separation {
+    display: inline-block;
+    width: 1px;
+    height: 600px;
+    vertical-align: top;
+    position: relative;
+    top: 11vh;
+    /** background **/
+    background: rgba(188,188,188,0.25);
+    background: -moz-linear-gradient(top, rgba(188,188,188,0.25) 0%, rgba(188,188,188,0.9) 5%, rgba(188,188,188,1) 10%, rgba(188,188,188,1) 90%, rgba(188,188,188,0.9) 95%, rgba(188,188,188,0.25) 100%);
+    background: -webkit-linear-gradient(top, rgba(188,188,188,0.25) 0%, rgba(188,188,188,0.9) 5%, rgba(188,188,188,1) 10%, rgba(188,188,188,1) 90%, rgba(188,188,188,0.9) 95%, rgba(188,188,188,0.25) 100%);
+    background: -o-linear-gradient(top, rgba(188,188,188,0.25) 0%, rgba(188,188,188,0.9) 5%, rgba(188,188,188,1) 10%, rgba(188,188,188,1) 90%, rgba(188,188,188,0.9) 95%, rgba(188,188,188,0.25) 100%);
+    background: -ms-linear-gradient(top, rgba(188,188,188,0.25) 0%, rgba(188,188,188,0.9) 5%, rgba(188,188,188,1) 10%, rgba(188,188,188,1) 90%, rgba(188,188,188,0.9) 95%, rgba(188,188,188,0.25) 100%);
+    background: linear-gradient(to bottom, rgba(188,188,188,0.25) 0%, rgba(188,188,188,0.9) 5%, rgba(188,188,188,1) 10%, rgba(188,188,188,1) 90%, rgba(188,188,188,0.9) 95%, rgba(188,188,188,0.25) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bcbcbc', endColorstr='#bcbcbc', GradientType=0 );
+}
+
+#degradtop {
+    position: absolute;
+    top: 0;
+}
+
+#degradbottom {
+    position: absolute;
+    bottom: 0;
+}
+
+#subscription {
+    width: 47vw;
+    display: inline-block;
+    position: relative;
+    top: 11vh;
+    margin: 0 auto;
+}
+
+#identify form {
+    width: 300px;
+    margin: 20px auto 0 auto;
+    text-align: center;
+}
+
+form input {
+    display: block;
+    outline: none;
+}
+#identify .champ {
+    border: none;
+    border-bottom: 1px dashed #7bbe42;
+    height: 30px;
+    width: 250px;
+    margin: 2px auto;
+    color: black;
+    padding: 5px 10px 0 10px;
+    font-size: 18px;
+    font-family: LatoLight;
+}
+
+#identify .champ:focus {
+    border-bottom: 1px solid #7bbe42;
+}
+
+#identify .button {
+    height: 35px;
+    width: 250px;
+    padding: 5px 10px;
+    border: 2px solid #7bbe42;
+    background-color: white;
+    margin: 20px auto 0 auto;
+    font-family: LatoLight;
+    font-size: 20px;
+    line-height: 20px;
+    transition: background-color 0.2s;
+    border-radius: 2px;
+}
+
+#identify .button:hover, #identify .button:focus {
+    color: white;
+    background-color: #7bbe42;
+    font-family: LatoRegular;
+    cursor: pointer;
+}
+
+#identify .title {
+    font-size: 36px;
+    text-align: center;
+    color: #969696;
+    font-family: LatoLight;
+    margin: 20px 0;
+}
+
+#identify .error {
+    height: 20px;
+    line-height: 20px;
+    width: 80%;
+    color: #e1272b;
+    font-size: 16px;
+    font-family: LatoLight;
+    text-align: left;
+    margin: 0 auto;
+}
+
+#identify .noError {
+    margin-bottom: 20px;
+}
+
+/** ACCOUNT **/
+
+#account {
+    width: 80vw;
+    height: 80vh;
+    min-height: 500px;
+    min-width: 600px;
+    /* background-color: rgba(128, 128, 128, 0.15); */
+    margin: 10vh auto 0 auto;
+    color: #a6a6a7;
+}
+
+#account .parameters, #account .abonnement, #account .rdv, #account .agenda {
+    border: 1px solid #7bbe42;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 2px;
+    background-color: rgba(123, 190, 66, 0.05);
+}
+
+#account .rightBlock {
+    width: 1150px;
+    display: inline-block;
+    height: 670px;
+}
+
+#account .title {
+    width: 80%;
+    max-width: 300px;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid rgba(166, 166, 167, 0.91);
+    font-size: 20px;
+    font-family: LatoRegular, serif;
+}
+
+#account .under-title {
+    height: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: LatoRegular;
+    text-decoration: underline;
+    margin: 5px 0 10px 0;
+}
+
+#account .button {
+    background-color: #7bbe42;
+    color: white;
+    padding: 3px 8px;
+    font-family: LatoLight;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+#account .button:hover {
+    cursor: pointer;
+}
+
+#account .icon {
+    height: 35px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/** PARAMETERS **/
+
+#account .parameters {
+    width: 310px;
+    display: inline-block;
+    height: 630px;
+    vertical-align: top;
+}
+
+#account .item-identifiants {
+    height: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: LatoLight;
+}
+
+#account .parameters .button {
+    margin: 10px 0;
+}
+
+form[name="modifyIdentifiant"] {
+    font-family: LatoLight, serif;
+}
+
+form[name="modifyIdentifiant"] .button {
+    height: 30px;
+    line-height: 25px;
+    font-size: 18px;
+}
+
+#account form input {
+    display: inline-block;
+    color: #a6a6a7;
+}
+
+#account form .label {
+    padding-right: 10px;
+}
+
+#account form .separation {
+    height: 15px;
+}
+
+#account form .champ {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    height: 25px;
+    border: none;
+    font-size: 16px;
+    line-height: 25px;
+    padding-left: 10px;
+}
+
+/** abonnement **/
+
+#account .abonnement {
+    height: 160px;
+}
+
+#account .abonnement .text {
+    font-family: LatoLight;
+    font-size: 18px;
+}
+
+#account .abonnement .button {
+    margin: 20px 0;
+}
+
+/** AGENDA **/
+
+#account .agenda {
+    display: inline-block;
+    width: 782px;
+    height: 438px;
+    vertical-align: top;
+}
+
+/** RDV ACCOUNT **/
+
+#account .rdv {
+    display: inline-block;
+    width: 260px;
+    height: 438px;
+    vertical-align: top;
+    overflow-y: auto;
+}
+
+#account .rdv .rdv-item {
+    font-family: LatoLight, serif;
+    width: 90%;
+    margin: 5px auto;
+}
+
+#account .rdv .circle {
+    height: 10px;
+    width: 10px;
+    background-color: #7bbe42;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.rdv-item .button {
+    margin: 10px 0;
+}
+
+.rdv .information {
+    width: 90%;
+    font-family: LatoLight, serif;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.rdv .information .titleInfo {
+    font-family: LatoRegular, serif;
+    font-size: 18px;
+    height: 20px;
+    line-height: 20px;
+    margin: 5px 0 10px 0;
+}
+
+/** PARTENAIRES **/
+
+.headerPartner {
+    height: 500px;
+    width: 100vw;
+    background-image: url(../image/headerPartner.png);
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+}
+
+.headerPartner .partner-list {
+    position: absolute;
+    bottom: 0;
+    height: 160px;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.headerPartner .partner-list .item {
+    width: 330px;
+    height: 200px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.headerPartner .partner-list .item .icon {
+    height: 90px;
+}
+
+.headerPartner .partner-list .item .text {
+    height: 75px;
+    line-height: 25px;
+    font-family: LatoRegular, serif;
+    font-size: 20px;
+    color: #383737;
+    vertical-align: middle;
+}
+
+#rappelBloc {
+    padding: 20px 0;
+    text-align: center;
+}
+
+#rappelBloc .title {
+    text-align: center;
+    font-family: LatoLight, serif;
+    font-size: 40px;
+    color: #7bbe42;
+    height: 70px;
+    line-height: 30px;
+}
+
+#rappelBloc .content {
+    padding: 20px;
+    width: 49vw;
+    margin: 0 auto;
+    border: 1px solid #a6a6a7;
+    text-align: left;
+}
+
+#rappelBloc .content .icon {
+    width: 18vw;
+    height: 13.28vw;
+}
+
+#rappelBloc .text {
+    width: 22vw;
+    height: 13.28vw;
+    color: #a6a6a7;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#rappelBloc .text .title {
+    height: 5.75vw;
+    line-height: 3vw;
+    color: #a6a6a7;
+    font-family: LatoLight, serif;
+}
+
+#rappelBloc .text .textInfo {
+    width: 22vw;
+    font-size: 20px;
+    font-family: LatoLight, serif;
+    line-height: 35px;
+    margin-left: 20px;
+}
+
+/** CONTACT **/
+
+.headerContact {
+    height: 500px;
+    width: 100vw;
+    background-image: url(../image/headerContact.png);
+    background-position: bottom;
+    position: relative;
+}
+
+.headerContact .box {
+    position: absolute;
+    bottom: 0;
+    height: 200px;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.70);
+    line-height: 200px;
+    text-align: center;
+}
+
+.headerContact .title {
+    color: #7bbe42;
+    font-family: LatoLight, serif;
+    font-size: 55px;
+    text-transform: uppercase;
+}
+
+#formContactBloc {
+    height: 360px;
+    padding: 20px 0;
+    width: 100vw;
+    text-align: center;
+}
+
+#formContactBloc .text {
+    height: 250px;
+    width: 215px;
+    vertical-align: top;
+    display: inline-block;
+    font-family: LatoLight, serif;
+    font-size: 18px;
+    text-align: left;
+}
+
+#formContactBloc .text .title {
+    color: #a6a6a7;
+    font-size: 20px;
+    margin: 0 0 25px 20px;
+    font-family: LatoRegular, serif;
+}
+
+/** CONTACT FORM **/
+
+#formContactBloc .form {
+    width: 420px;
+    height: 320px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+#formContactBloc .form .title {
+    font-family: LatoRegular, serif;
+    color: #a6a6a7;
+    font-size: 20px;
+    margin: 0 5px 5px 5px;
+}
+
+
+#formContactBloc .form .champ {
+    height: 25px;
+    border: 1px solid #dfdfdf;
+    margin: 5px;
+    border-radius: 2px;
+    font-family: LatoLight, serif;
+    font-size: 18px;
+}
+
+#formContactBloc .form .inline {
+    display: inline-block;
+    width: 180px;
+    padding: 0 5px;
+}
+
+#formContactBloc .form .block {
+    width: 385px;
+    padding: 0 5px;
+    display: block;
+}
+
+#formContactBloc .form .textarea {
+    width: 385px;
+    padding: 5px;
+    display: block;
+    border: 1px solid #dfdfdf;
+    margin: 10px 5px;
+    min-height: 120px;
+    max-height: 200px;
+    resize: vertical;
+    border-radius: 2px;
+    font-family: LatoLight, serif;
+    font-size: 18px;
+    outline: none;
+}
+
+#formContactBloc .form .textarea:focus, #formContactBloc .form .champ:focus {
+    border: 1px solid #c2c2c2;
+}
+
+#formContactBloc .form .button {
+    background-color: #7bbe42;
+    color: white;
+    font-family: LatoLight, serif;
+    font-size: 18px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    height: 30px;
+    line-height: 28px;
+    width: 100px;
+    margin: 5px;
+}
+
+#formContactBloc .form .button:hover {
+    cursor: pointer;
+}
+
+/** CONTACT ADRESS **/
+
+#formContactBloc .adress {
+    height: 250px;
+    width: 190px;
+    vertical-align: top;
+    display: inline-block;
+    background-color: #7bbe42;
+    color: white;
+    border-radius: 2px;
+}
+
+#formContactBloc .adress .title {
+    height: 60px;
+    font-family: LatoRegular, serif;
+    font-size: 18px;
+    text-align: center;
+    line-height: 60px;
+    color: black;
+}
+
+#formContactBloc .adress .icon {
+    width: 40px;
+    vertical-align: middle;
+    position: relative;
+    right: 7px;
+}
+
+#formContactBloc .adress .text{
+    width: 140px;
+    line-height: 25px;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: LatoRegular, serif;
+}
