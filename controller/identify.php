@@ -18,7 +18,11 @@ if (!empty($_POST)) {
             $user->addUser($_POST);
             $_SESSION['user'] = $user->getUserByMailAndPassword($_POST['mail'], $_POST['password']);
             addMessageFlash('success', 'Inscription réussie, bienvenue '.$_POST['firstName']);
-            go('index.php', 0);
+            if(isset($_SESSION['abonnement'])){
+                go('index.php?p=abonnement', 0);
+            }else{
+                go('index.php', 0);
+            }
         } else {
             addMessageFlash('error', 'Cet identifiant est déjà pris');
             go('?p=identify', 0);
@@ -28,7 +32,11 @@ if (!empty($_POST)) {
         if ($result) {
             $_SESSION['user'] = $result;
             addMessageFlash('success', 'Vous êtes maintenant connecté en tant que '.$_SESSION['user']['FirstName']);
-            go('index.php', 0);
+            if(isset($_SESSION['abonnement'])){
+                go('index.php?p=abonnement', 0);
+            }else{
+                go('index.php', 0);
+            }
         } else {
             addMessageFlash('error', 'Les identifiants sont incorrects');
             go('index.php?p=identify', 0);

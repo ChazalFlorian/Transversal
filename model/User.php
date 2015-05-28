@@ -84,10 +84,10 @@ class User
         return $request->fetch();
     }
 
-    public function setUserSubscription($mail, $subID){
-        $request = $this->bdd->prepare('UPDATE users SET subcription_ID = :subID WHERE mail = :mail');
+    public function setUserSubscription($ID, $subID){
+        $request = $this->bdd->prepare('UPDATE users SET subcription_ID = :subID WHERE ID = :id');
         $request->execute([
-            'mail' => $mail,
+            'id' => $ID,
             'subID' => $subID
         ]);
     }

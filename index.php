@@ -19,12 +19,14 @@ require_once __DIR__.'/model/Connection.php';
 require_once __DIR__.'/model/RendezVous.php';
 require_once __DIR__.'/model/Partner.php';
 require_once __DIR__.'/model/Subcription.php';
+require_once __DIR__.'/model/Service.php';
 require_once 'model/function.php';
 
 $user = new \model\User(Connection::getConnection());
 $RDV = new model\Rendezvous(Connection::getConnection());
 $partner = new model\Partner(Connection::getConnection());
 $sub = new model\Subcription(Connection::getConnection());
+$Service  = new model\Service(Connection::getConnection());
 
 // Liste blanche, c'est notre routing qui correspont à nos pages
 $routing = [
@@ -54,6 +56,10 @@ $routing = [
     ],
     'contact' => [
         'controller' => 'contact',
+        'secure' => false
+    ],
+    'abonnement' => [
+        'controller' => 'abonnement',
         'secure' => false
     ]
 ];

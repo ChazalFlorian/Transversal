@@ -12,6 +12,7 @@ $prenom = $_SESSION['user']['FirstName'];
 $tel = $_SESSION['user']['Phone'];
 $userSub = $_SESSION['user']['Subcription_ID'];
 
+$currentRDV = $RDV->getRendezvousByUser($_SESSION['user']['ID']);
 $currentSub = $sub->getNameByID($userSub);
 ?>
 <div id="account">
@@ -24,7 +25,7 @@ $currentSub = $sub->getNameByID($userSub);
             <button class="button" id="modifyIdentifiant">Modifier</button>
         </div>
         <p class="under-title">Informations du compte</p>
-        <form name="modifyIdentifiant" method="post" action="index.php?p=account">
+        <form name="modifyIdentifiant" method="post" action="index.php?p=abonnement">
             <table>
                 <tr>
                     <td class="label">Mail :</td>
@@ -48,7 +49,8 @@ $currentSub = $sub->getNameByID($userSub);
                 <tr class="separation"></tr>
                 <tr>
                     <td></td>
-                    <td><input type="submit" class="button" value="Enregistrer"></td>
+                    <td><inpu type="hidden" value="<?=$_SESSION['user']['ID']?>" name="sub"></inpu>
+                        <input type="submit" class="button" value="Enregistrer"></td>
                 </tr>
             </table>
 
@@ -59,19 +61,26 @@ $currentSub = $sub->getNameByID($userSub);
             <p class="title"><img src="view/image/accountUserAbonnement.png" class="icon" alt="icon">Agenda</p>
             <p class="under-title"><?=$currentSub['Name'] ?></p>
             <p class="text"><?=$currentSub['Desc']?></p>
-            <button class="button">Changer d'offre</button>
+            <a href="index.php?p=abonnement"><button class="button">Changer d'offre</button></a>
         </div>
         <div class="rdv">
             <p class="title"><img src="view/image/accountUserRdv.png" class="icon" alt="icon">Rendez-vous</p>
             <p class="under-title">Prochains rendez-vous</p>
-            <div class="rdv-item">
-                <p class="text"><div class="circle"></div>Exemple de rendez-vous 1</p>
-                <button class="button">Annuler</button>
-            </div>
-            <div class="rdv-item">
-                <p class="text"><div class="circle"></div>Exemple de rendez-vous 2</p>
-                <button class="button">Annuler</button>
-            </div>
+            <?php
+                foreach($currentRDV as $value){
+                    $temp = $Service->getRendezvousByID($value['Service_ID']);
+                    echo "
+                        <div class=\"rdv-item\">
+                            <p class=\"text\"><div class=\"circle\"></div>".$value['Date']."</p>
+                            <p class=\"text\">".$temp[0]['Name']."</p>
+                            <p class=\"text\">".$temp[0]['Desc']."</p>
+                            <p class=\"text\">".$temp[0]['User/Price']." €</p>
+                            <button class=\"button\">Annuler</button>
+                        </div>
+                        ";
+                }
+            ?>
+
             <div class="information">
                 <p class="titleInfo">- Attention -</p>
                 <p class="textInfo">

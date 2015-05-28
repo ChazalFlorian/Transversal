@@ -16,36 +16,36 @@
 <div id="offres">
     <h2 class="title">Nos Offres d'Abonnements</h2>
     <div class="offre-box">
-        <img src="view/image/abo30.png" alt="photo" class="photo">
+        <img src="view/image/abo1.png" alt="photo" class="photo">
         <div class="infoText">
             <p class="under-title">Massage</p>
             <p class="info">Vitae adipiscing turpis. Aenean ligula nibh, molestie id vivide.</p>
         </div>
         <div class="infoPrix">
             <p class="prix">30<span class="euro">€</span><span class="mois">/mois</span></p>
-            <a href="#" class="more">Choisir cette offre</a>
+            <a href="index.php?p=abonnement&v=1" class="more">Choisir cette offre</a>
         </div>
     </div>
     <div class="offre-box">
-        <img src="view/image/abo50.png" alt="photo" class="photo">
+        <img src="view/image/abo2.png" alt="photo" class="photo">
         <div class="infoText">
             <p class="under-title">Massage</p>
             <p class="info">Vitae adipiscing turpis. Aenean ligula nibh, molestie id vivide.</p>
         </div>
         <div class="infoPrix">
             <p class="prix">50<span class="euro">€</span><span class="mois">/mois</span></p>
-            <a href="#" class="more">Choisir cette offre</a>
+            <a href="index.php?p=abonnement&v=2" class="more">Choisir cette offre</a>
         </div>
     </div>
     <div class="offre-box">
-        <img src="view/image/abo75.png" alt="photo" class="photo">
+        <img src="view/image/abo3.png" alt="photo" class="photo">
         <div class="infoText">
             <p class="under-title">Massage</p>
             <p class="info">Vitae adipiscing turpis. Aenean ligula nibh, molestie id vivide.</p>
         </div>
         <div class="infoPrix">
             <p class="prix">75<span class="euro">€</span><span class="mois">/mois</span></p>
-            <a href="#" class="more">Choisir cette offre</a>
+            <a href="index.php?p=abonnement&v=3" class="more">Choisir cette offre</a>
         </div>
     </div>
 </div>

@@ -30,7 +30,7 @@ class Rendezvous {
         $request->execute([
             'user' => $idUser
         ]);
-        return $request->fetch(PDO::FETCH_ASSOC);
+        return $request->fetchAll(\PDO::FETCH_ASSOC);
     }
 
     function getRendezvousByService($idService){
@@ -38,7 +38,7 @@ class Rendezvous {
         $request->execute([
             'service' => $idService
         ]);
-        return $request->fetch(PDO::FETCH_ASSOC);
+        return $request->fetch(\PDO::FETCH_ASSOC);
     }
 
     function getRendezvousByDate($date){
@@ -46,7 +46,7 @@ class Rendezvous {
         $request->execute([
             'date' => $date
         ]);
-        return $request->fetch(PDO::FETCH_ASSOC);
+        return $request->fetch(\PDO::FETCH_ASSOC);
     }
 
     function getRendezvousByUserAndDate($idUser, $date){
@@ -55,7 +55,7 @@ class Rendezvous {
             'user' => $idUser,
             'date' => $date
         ]);
-        return $request->fetch(PDO::FETCH_ASSOC);
+        return $request->fetch(\PDO::FETCH_ASSOC);
     }
 
     function getRendezvousByServiceAndDate($idService, $date){
@@ -64,7 +64,7 @@ class Rendezvous {
             'service' => $idService,
             'date' => $date
         ]);
-        return $request->fetch(PDO::FETCH_ASSOC);
+        return $request->fetch(\PDO::FETCH_ASSOC);
     }
 
 

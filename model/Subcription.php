@@ -18,7 +18,7 @@ class Subcription{
         return $request->fetch(\PDO::FETCH_ASSOC);
     }
 
-    function getSubcription(){
+    function getAllSubcription(){
         $request = $this->bdd->prepare("SELECT * FROM Subcription");
         $request->execute();
         return $request->fetchAll(\PDO::FETCH_ASSOC);
